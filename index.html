@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMpZqHfe7B2+f0Xy93XBt1Vprq5n6akfuo/jS5X"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header>
+        <h1 class="title">iChat 💬</h1>
+        <button class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+          <!-- Default icon -->
+        </button>
+      </header>
+
+      <div class="main">
+        <div class="name">
+          <span><i class="fas fa-user-circle"></i></span>
+          <input
+            type="text"
+            id="name-input"
+            class="name-input"
+            value="anonymous"
+            maxlength="20"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <ul class="message-container" id="message-container"></ul>
+
+        <form class="message-form" id="message-form">
+          <input
+            type="text"
+            name="message"
+            id="message-input"
+            class="message-input"
+            placeholder="Type a message"
+            autocomplete="off"
+          />
+          <button type="submit" class="send-button">
+            <i class="fas fa-paper-plane"></i>
+            <!-- Instagram-like submit button icon -->
+          </button>
+        </form>
+      </div>
+      <h3 class="clients-total" id="client-total">Total clients: 2</h3>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
